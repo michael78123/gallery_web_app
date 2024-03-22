@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Image from "./Image";
 
 const App = () => {
   const [images, setImages] = useState([]);
@@ -28,9 +29,21 @@ const App = () => {
   return (
     <div>
       {images &&
-        images.map((image) => (
-          <img src={image.url} />
-        ))}
+        images.map(
+          ({
+            id,
+            url,
+            upvote_count: upvoteCount,
+            downvote_count: downvoteCount,
+          }) => (
+            <Image
+              id={id}
+              url={url}
+              upvoteCount={upvoteCount}
+              downvoteCount={downvoteCount}
+            />
+          )
+        )}
     </div>
   );
 };

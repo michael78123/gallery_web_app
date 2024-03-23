@@ -34,8 +34,5 @@ def downvote_image():
     response = {"id":data[0], "url": data[1], "upvote_count": data[2], "downvote_count": data[3]}
     return jsonify(response)
 
-
-
-
 if __name__ == '__main__':
 	app.run(debug=True)

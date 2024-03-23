@@ -5,7 +5,6 @@
 
 ### make sure you're in the server folder
 
-Create the virtual env for the flask server
 ```
 python3 -m venv venv
 ```
@@ -45,9 +44,7 @@ npm run dev
 Once everything is set up, could go to http://localhost:5173/ to visit the react app
 
 ## Running Unittest for Rest API
-```
 make sure you're in server folder
-```
 
 ```
 python -m unittest test_api.py

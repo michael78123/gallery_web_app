@@ -1,16 +1,16 @@
 # gallery_web_app
 
 
-## Running Python Flask Server
+## Setting and Running Python Flask Server
 
-Set up and activate a Python environment. One way to do this is:
+### make sure you're in the server folder
 
-```
-make sure you're in server folder
-```
-
+Create the virtual env for the flask server
 ```
 python3 -m venv venv
+```
+
+```
 source venv/bin/activate
 ```
 
@@ -32,9 +32,7 @@ This will start the local server on port 5000.
 ## Running React App
 Set up React frontend, please follow the following instructions:
 
-```
-make sure you're in client folder
-```
+### make sure you're in client folder
 
 ```
 npm install

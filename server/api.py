@@ -3,13 +3,6 @@ from db import Image
 
 app = Flask(__name__)
 
-@app.route('/name')
-def index():
-    return jsonify({
-        "name": "hello",
-		'image': "image1.jpg",
-    })
-
 @app.route('/images', methods=["GET"])
 def get_images():
     images_db = Image()

@@ -25,13 +25,23 @@ def get_images():
 
 @app.route('/upvote', methods=["POST"])
 def upvote_image():
+    images_db = Image()
     row_id = request.json.get("id")
-    return jsonify({"row_id": row_id})
+    images_db.upvote_image(row_id)
+    data = images_db.get_image(row_id)[0]
+    response = {"id":data[0], "url": data[1], "upvote_count": data[2], "downvote_count": data[3]}
+    return jsonify(response)
 
 @app.route('/downvote', methods=["POST"])
 def downvote_image():
+    images_db = Image()
     row_id = request.json.get("id")
-    return jsonify({"row_id": row_id})
+    images_db.downvote_image(row_id)
+    data = images_db.get_image(row_id)[0]
+    response = {"id":data[0], "url": data[1], "upvote_count": data[2], "downvote_count": data[3]}
+    return jsonify(response)
+
+
 
 
 if __name__ == '__main__':

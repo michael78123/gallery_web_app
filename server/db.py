@@ -48,8 +48,35 @@ class Image():
         connect.close()
         return data
 
+    def get_image(self, id):
+        connect = sqlite3.connect('image.db')
+        cursor = connect.cursor()
+        cursor.execute("SELECT rowid, * FROM images WHERE rowid = (?)", str(id))
+        data = cursor.fetchall()
+        connect.commit()
+        connect.close()
+        return data
+
+
+    def upvote_image(self, id):
+        connect = sqlite3.connect('image.db')
+        cursor = connect.cursor()
+        cursor.execute("UPDATE images SET upvote_count = upvote_count + 1 WHERE rowid = (?)", str(id))
+        connect.commit()
+        connect.close()
+
+    def downvote_image(self, id):
+        connect = sqlite3.connect('image.db')
+        cursor = connect.cursor()
+        cursor.execute("UPDATE images SET downvote_count = downvote_count + 1 WHERE rowid = (?)", str(id))
+        connect.commit()
+        connect.close()
+
+
 
 # image = Image()
 # image._init_table()
 # image._add_images()
+# image.get_all_images()
+# image.upvote_image(1)
 # image.get_all_images()

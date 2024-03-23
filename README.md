@@ -44,6 +44,8 @@ npm install
 npm run dev
 ```
 
+Once everything is set up, could go to http://localhost:5173/ to visit the react app
+
 ## Running Unittest for Rest API
 ```
 make sure you're in server folder
@@ -52,3 +54,4 @@ make sure you're in server folder
 ```
 python -m unittest test_api.py
 ```
+

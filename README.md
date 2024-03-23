@@ -2,9 +2,9 @@
 
 This repository offers a web gallery application powered by a Python Flask server and a React frontend. Upon launching the application, users can vote on images within the gallery, with the vote count being dynamically updated. Data is stored persistently in a Python SQLite database.
 
-The primary modifications for the React Application are located within the client/src directory. App.jsx serves as the main application file, while Vote.jsx and Image.jsx function as custom components.
+The primary modifications for the React Application are located within the **client/src** directory. **App.jsx** serves as the main application file, while **Vote.jsx** and **Image.jsx** function as custom components.
 
-In the Flask Server, api.py serves as the entry point to initiate the application. test_api.py functions as the entry point for testing the REST API. Additionally, db.py encapsulates helper functions for creating and interacting with the database.
+In the Flask Server, **api.py** serves as the entry point to initiate the application. **test_api.py** functions as the entry point for testing the REST API. Additionally, **db.py** encapsulates helper functions for creating and interacting with the database.
 
 
 ## Setting and Running Python Flask Server

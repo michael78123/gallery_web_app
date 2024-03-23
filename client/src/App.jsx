@@ -12,19 +12,19 @@ const App = () => {
   };
 
   const upvote = async (id) => {
-    return await axios.post("/api/upvote", {id: id});
+    const response = await axios.post("/api/upvote", { id: id });
+    return response.data.upvote_count;
   };
 
-
   const downvote = async (id) => {
-    return await axios.post("/api/downvote", {id: id});
+    const response = await axios.post("/api/downvote", { id: id });
+    return response.data.downvote_count;
   };
 
   useEffect(() => {
     fetchImages();
   }, []);
 
-  console.log('rerender????')
   return (
     <div>
       {images &&
